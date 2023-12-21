@@ -1,0 +1,38 @@
+<div class="container mt-5 mb-5">
+    <div class="card p-2">
+      <div class="row">
+        <div class="col-12">
+
+
+
+
+            <form #movieForm="ngForm" (ngSubmit)="addNewMovie(movieForm)">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>primaryTitle</mat-label>
+                    <input matInput placeholder="primaryTitle" [(ngModel)]="data.primaryTitle" name="primaryTitle"
+                        value="primaryTitle">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>originalTitle</mat-label>
+                    <input matInput placeholder="originalTitle" [(ngModel)]="data.originalTitle"
+                        name="originalTitle" value="originalTitle">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>startYear</mat-label>
+                    <input matInput placeholder="startYear" [(ngModel)]="data.startYear"
+                    name="startYear" value="startYear">
+                </mat-form-field>
+
+                <div align="end">
+                    <button mat-stroked-button color="primary" style="margin-right: 4px;" (click)="onNoClick()">Close</button>
+                    <button mat-stroked-button color="primary" type="submit" >Submit</button>
+                </div>
+            </form>
+
+
+
+
+        </div>
+      </div>
+    </div>
+</div>
